@@ -5,16 +5,28 @@ import java.util.ArrayList;
 public class Buch {
 
     private static ArrayList<Buch> buecher = new ArrayList<>();
-    String title, autor, isbn, verlag;
-    int buchnummer, anzahlSeiten;
     private static int currentID = 0;
 
-    public Buch(String title, String autor, String isbn, String verlag, int anzahlSeiten) {
+    private String title, autor, isbn, verlag;
+    private int buchnummer, anzahlSeiten;
+    private float preis;
+
+    public static int nextFree() {
+        return currentID + 1;
+    }
+
+    public static ArrayList<Buch> getBuecher() {
+        return buecher;
+    }
+
+
+    public Buch(String title, String autor, String isbn, String verlag, int anzahlSeiten, float preis) {
         this.title = title;
         this.autor = autor;
         this.isbn = isbn;
         this.verlag = verlag;
         this.anzahlSeiten = anzahlSeiten;
+        this.preis = preis;
 
         this.buchnummer = currentID;
         currentID++;
@@ -31,15 +43,8 @@ public class Buch {
                 ", verlag='" + verlag + '\'' +
                 ", buchnummer=" + buchnummer +
                 ", anzahlSeiten=" + anzahlSeiten +
+                ", preis=" + preis + "€" +
                 '}';
-    }
-
-    public static int nextFree() {
-        return currentID + 1;
-    }
-
-    public static ArrayList<Buch> getBuecher() {
-        return buecher;
     }
 
 }
