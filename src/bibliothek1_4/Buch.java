@@ -28,8 +28,8 @@ public class Buch {
         this.anzahlSeiten = anzahlSeiten;
         this.preis = preis;
 
-        this.buchnummer = currentID;
         currentID++;
+        this.buchnummer = currentID;
 
         buecher.add(this);
     }

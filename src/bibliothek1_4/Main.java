@@ -9,6 +9,8 @@ public class Main {
         for(Buch buch : Buch.getBuecher()) {
             System.out.println(buch.toString());
         }
+
+        System.out.println("Die nächste freie Buchnummer ist: " + Buch.nextFree());
     }
 
 }
