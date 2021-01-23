@@ -1,8 +1,8 @@
-package bibliothek5;
+package bibliothek;
 
 import java.util.ArrayList;
 
-public class Buch {
+public class Buch extends Medium {
 
     private static ArrayList<Buch> buecher = new ArrayList<>();
     private static int currentID = 0;
@@ -45,10 +45,6 @@ public class Buch {
                 ", anzahlSeiten=" + anzahlSeiten +
                 ", preis=" + preis + "€" +
                 '}';
-    }
-
-    public static int getCurrentID() {
-        return currentID;
     }
 
     public String getTitle() {
